@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Contatos :: Adicionar</title>
+<link
+	href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css"
+	rel="stylesheet" id="bootstrap-css">
+<script
+	src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <ul class="nav navbar-nav">
+    <li><a href="/exibirContato">Cadastrar Contatos</a></li>
+    <li><a href="/listarContatos">Listar Contatos</a></li>
+  </ul>
+</nav>
+
+	<div class="container col-sm-12 col-md-6 col-md-offset-2" >
+		<form action="/salvarGrupo" th:object="${grupo}" method="post">
+		<input type="hidden" th:field="*{id}"  th:value="id">
+			<div class="form-group">
+				<label for="nomeGrupo">Nome do Grupo</label> <input type="text" th:field="*{nomeGrupo}"
+					class="form-control" id="nomeGrupo" placeholder="Nome do Grupo">
+			</div>	
+				<div class="form-group">
+					<label for="visibilidade">Visibilidade</label> 
+						<select required class="form-control" id="visibilidade"
+						th:field="*{visibilidade}">
+						<option th:value="''">Selecione</option>
+						<option th:value="PRIVADO">Privado</option>
+						<option th:value="PUBLICO">Público</option>
+					</select>
+				</div>
+			<div class="form-group">
+				<label for="data">Data de Expiração</label> <input type="date" class="form-control"
+					th:field="*{dataExpiracao}" required/>
+			</div>
+			
+
+
+			<button type="submit" class="btn btn-primary">Enviar</button>
+		</form>
+
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,11 @@
+br\ifpe\web2\service\GrupoService.class
+br\ifpe\web2\model\Estado.class
+br\ifpe\web2\model\ContatoDAO.class
+br\ifpe\web2\crudContato.class
+br\ifpe\web2\model\Grupo.class
+br\ifpe\web2\service\ContatoService.class
+br\ifpe\web2\controller\GrupoController.class
+br\ifpe\web2\controller\ContatoController.class
+br\ifpe\web2\model\Contato.class
+br\ifpe\web2\model\Visivel.class
+br\ifpe\web2\model\GrupoDAO.class
