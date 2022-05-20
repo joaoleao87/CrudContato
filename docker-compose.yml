@@ -8,9 +8,9 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: root
       
-  crudApp:
+  crudapp:
     build: "./"
-    container_name: crudApp
+    container_name: crudapp
     restart: always
     ports:
      - "8080:8080"
