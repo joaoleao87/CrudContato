@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  crud:
+    image: mariadb:latest
+    container_name: crud
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      
+  crudApp:
+    build: "./"
+    container_name: crudApp
+    restart: always
+    ports:
+     - "8080:8080"
+    depends_on:
+     - crud
